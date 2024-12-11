@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code - Face à la Mer</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+
+<body class="bg-light">
+    <div class="container my-5">
+        <div class="text-center">
+            <h1 class="mb-4">QR Code - Face à la Mer</h1>
+            <p class="lead mb-5">
+                Scannez ce QR Code pour découvrir notre restaurant en ligne.
+            </p>
+            <div id="qrcode" class="d-inline-block p-3 bg-white shadow rounded"></div>
+            <p class="mt-3">
+                <!--  <a
+                        href="https://restoqr.olowoshop.com"
+                        class="btn btn-primary"
+                        target="_blank"
+                    >
+                        Visitez le site web
+                    </a> -->
+            </p>
+        </div>
+    </div>
+
+    <!-- Script QR Code -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const qrCodeElement = document.getElementById("qrcode");
+            if (qrCodeElement) {
+                new QRCode(qrCodeElement, {
+                    text: "https://restoqr.olowoshop.com",
+                    width: 200,
+                    height: 200,
+                });
+            }
+        });
+    </script>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
